@@ -23,6 +23,10 @@ Then:
 - **Agent-agnostic:** no vendor-specific syntax, tool names, or paths. If an entry has environment requirements, state them in the `compatibility` frontmatter field.
 - **No secrets:** never include credentials, internal hostnames, or private data.
 
+## Bundled copies
+
+Some skills bundle a copy of an instruction so they work when copied alone. `SYNCED_COPIES` in `scripts/validate.py` lists them. When you edit the source, copy it over; validation fails until you do.
+
 ## Skill structure
 
 Every `SKILL.md` needs:

@@ -6,19 +6,36 @@
       "name": "code-review",
       "description": "Review a diff or pull request for correctness, readability, and maintainability issues. Use when asked to review code changes.",
       "path": "skills/code-review",
-      "tags": ["code", "review"]
+      "tags": [
+        "code",
+        "review"
+      ]
     },
     {
       "name": "data-analysis",
       "description": "Explore, clean, and summarize tabular data. Use when asked to analyze a CSV, spreadsheet, or dataset.",
       "path": "skills/data-analysis",
-      "tags": ["data"]
+      "tags": [
+        "data"
+      ]
     },
     {
       "name": "docx-handling",
       "description": "Create, read, and edit Word (.docx) documents. Use when a task involves a .docx file as input or output.",
       "path": "skills/docx-handling",
-      "tags": ["documents"]
+      "tags": [
+        "documents"
+      ]
+    },
+    {
+      "name": "tighten-writing",
+      "description": "Rewrite text, code comments, or documentation to be shorter, plainer, and more direct. Use when asked to tighten, simplify, shorten, or de-fluff writing, or to clean up verbose comments or docs.",
+      "path": "skills/tighten-writing",
+      "tags": [
+        "writing",
+        "docs",
+        "comments"
+      ]
     }
   ],
   "instructions": [
@@ -26,13 +43,27 @@
       "name": "coding-standards",
       "description": "General coding standards for readability, naming, and structure.",
       "path": "instructions/coding-standards.md",
-      "tags": ["code"]
+      "tags": [
+        "code"
+      ]
+    },
+    {
+      "name": "concise-writing",
+      "description": "Rules for short, plain, direct writing in responses, code comments, and documentation.",
+      "path": "instructions/concise-writing.md",
+      "tags": [
+        "writing",
+        "docs",
+        "comments"
+      ]
     },
     {
       "name": "commit-conventions",
       "description": "Rules for writing git commit messages.",
       "path": "instructions/commit-conventions.md",
-      "tags": ["git"]
+      "tags": [
+        "git"
+      ]
     }
   ],
   "prompts": [
@@ -40,7 +71,9 @@
       "name": "general-assistant",
       "description": "Baseline system prompt for a general-purpose assistant agent.",
       "path": "prompts/system-prompts/general-assistant.md",
-      "tags": ["system-prompt"]
+      "tags": [
+        "system-prompt"
+      ]
     }
   ]
 }

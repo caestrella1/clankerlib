@@ -3,7 +3,7 @@ name: code-review
 description: Review a diff or pull request for correctness, readability, and maintainability issues. Use when asked to review code changes.
 ---
 
-# Code Review
+# Code review
 
 ## Purpose
 
@@ -33,9 +33,9 @@ Produce a prioritized list of actionable findings for a set of code changes. Foc
    - Concurrency: shared mutable state, missing awaits, race conditions
    - API contract changes that break existing callers
 5. **Check tests.** Does a test cover the new behavior? Would it fail if the change were reverted?
-6. **Check maintainability.** Look for duplicated logic, unclear names, functions doing too much, and dead code.
+6. **Check maintainability.** Look for duplicated logic, unclear names, functions doing too much, and dead code. Flag comments that narrate the code, restate names, or record history. They should explain why (concise-writing rules C1 to C3).
 7. **Verify before reporting.** For each finding, confirm it against the actual code. Drop anything you cannot back up with a concrete scenario.
-8. **Report** using the format below, most severe first.
+8. **Report** using the format below, most severe first. Keep each finding short: the problem, the scenario, the fix. No preamble or closing summary beyond the verdict.
 
 ## Output format
 

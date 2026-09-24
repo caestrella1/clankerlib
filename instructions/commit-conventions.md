@@ -4,7 +4,7 @@ description: Rules for writing git commit messages.
 applies-to: git
 ---
 
-# Commit Conventions
+# Commit conventions
 
 Commit messages based on [Conventional Commits](https://www.conventionalcommits.org). The goal is history that is easy to scan, search, and turn into a changelog.
 

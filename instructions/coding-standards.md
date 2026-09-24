@@ -4,7 +4,7 @@ description: General coding standards for readability, naming, and structure.
 applies-to: all
 ---
 
-# Coding Standards
+# Coding standards
 
 Language-agnostic rules for code an agent writes or edits. The goal is code a teammate can read, change, and trust. When a project has its own style guide, linter, or formatter, that takes precedence over these rules.
 
@@ -32,8 +32,7 @@ Language-agnostic rules for code an agent writes or edits. The goal is code a te
 - Error messages say what failed *and* what to do: `"config.yaml not found; run 'init' first"`.
 
 ### Comments
-- Explain *why*, not *what*. The code already says what.
-- Delete commented-out code. Git keeps the history.
+- Follow the code comment rules (C1 to C7) in [concise-writing](concise-writing.md): explain why, not what.
 - `TODO` comments include a reason or ticket: `# TODO(#123): remove after v2 migration`.
 
 ### Scope

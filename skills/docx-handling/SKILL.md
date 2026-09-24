@@ -4,7 +4,7 @@ description: Create, read, and edit Word (.docx) documents. Use when a task invo
 compatibility: Requires Python 3 with python-docx; pandoc optional. Installing them needs network access.
 ---
 
-# DOCX Handling
+# DOCX handling
 
 ## Purpose
 

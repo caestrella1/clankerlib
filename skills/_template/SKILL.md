@@ -8,7 +8,7 @@ description: One sentence describing what the skill does and when an agent shoul
 #   author: your-name
 ---
 
-# Skill Title
+# Skill title
 
 ## Purpose
 
@@ -16,7 +16,7 @@ TODO: What this skill does and the outcome it produces.
 
 ## When to use
 
-TODO: Trigger conditions — the requests, file types, or situations that should activate this skill.
+TODO: Trigger conditions: the requests, file types, or situations that should activate this skill.
 
 - TODO
 - TODO

@@ -3,7 +3,7 @@ name: data-analysis
 description: Explore, clean, and summarize tabular data. Use when asked to analyze a CSV, spreadsheet, or dataset.
 ---
 
-# Data Analysis
+# Data analysis
 
 ## Purpose
 

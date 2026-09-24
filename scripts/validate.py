@@ -7,6 +7,7 @@ Checks:
   - `description` is <= 1024 chars (Agent Skills spec: https://agentskills.io/specification)
   - every manifest entry points to an existing path with matching name/description
   - every entry on disk is listed in the manifest (templates excluded)
+  - copies bundled into skills match their source (see SYNCED_COPIES)
 
 Usage: python3 scripts/validate.py
 """
@@ -18,6 +19,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 NAME_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 errors = []
+
+# Skills must work when copied alone, so some bundle a copy of a shared file.
+# copy path -> source path
+SYNCED_COPIES = {
+    "skills/tighten-writing/references/concise-writing.md": "instructions/concise-writing.md",
+}
 
 
 def parse_frontmatter(path):
@@ -100,6 +107,11 @@ def main():
         for name in entries:
             if name not in listed:
                 errors.append(f"manifest.json: {section} `{name}` exists on disk but is not listed")
+
+    for copy, source in SYNCED_COPIES.items():
+        copy_path, source_path = ROOT / copy, ROOT / source
+        if not copy_path.is_file() or copy_path.read_bytes() != source_path.read_bytes():
+            errors.append(f"{copy} is out of sync; run: cp {source} {copy}")
 
     if errors:
         print("Validation failed:")

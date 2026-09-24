@@ -13,6 +13,7 @@ Each skill lives in its own folder under `skills/` and follows the open [Agent S
 | [code-review](skills/code-review/SKILL.md) | Review diffs/PRs for correctness, readability, maintainability | Asked to review code changes |
 | [data-analysis](skills/data-analysis/SKILL.md) | Explore, clean, and summarize tabular data | Analyzing a CSV, spreadsheet, or dataset |
 | [docx-handling](skills/docx-handling/SKILL.md) | Create, read, and edit Word documents | A `.docx` file is input or output |
+| [tighten-writing](skills/tighten-writing/SKILL.md) | Rewrite text, comments, or docs to be shorter and plainer. Includes a checker script | Asked to shorten, simplify, or de-fluff writing |
 
 ### Instructions
 
@@ -22,6 +23,7 @@ Standing rules to include in whatever file your agent reads for project context 
 |---|---|---|
 | [coding-standards](instructions/coding-standards.md) | Readability, naming, and structure rules | Any coding task |
 | [commit-conventions](instructions/commit-conventions.md) | Commit message rules | Agent writes git commits |
+| [concise-writing](instructions/concise-writing.md) | Short, plain writing rules for responses, comments, and docs | Always; add it to every agent |
 
 ### Prompts
 
