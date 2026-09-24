@@ -3,15 +3,6 @@
   "version": "0.1.0",
   "skills": [
     {
-      "name": "code-review",
-      "description": "Review a diff or pull request for correctness, readability, and maintainability issues. Use when asked to review code changes.",
-      "path": "skills/code-review",
-      "tags": [
-        "code",
-        "review"
-      ]
-    },
-    {
       "name": "data-analysis",
       "description": "Explore, clean, and summarize tabular data. Use when asked to analyze a CSV, spreadsheet, or dataset.",
       "path": "skills/data-analysis",
@@ -36,6 +27,15 @@
       "tags": [
         "documents"
       ]
+    },
+    {
+      "name": "second-opinion",
+      "description": "Review a diff or pull request for correctness, readability, and maintainability issues. Use when asked to review code changes.",
+      "path": "skills/second-opinion",
+      "tags": [
+        "code",
+        "review"
+      ]
     }
   ],
   "instructions": [
@@ -48,9 +48,9 @@
       ]
     },
     {
-      "name": "commit-conventions",
+      "name": "commits-for-humans",
       "description": "Rules for writing git commit messages.",
-      "path": "instructions/commit-conventions.md",
+      "path": "instructions/commits-for-humans.md",
       "tags": [
         "git"
       ]
@@ -68,9 +68,9 @@
   ],
   "prompts": [
     {
-      "name": "general-assistant",
+      "name": "simple-clanker",
       "description": "Baseline system prompt for a general-purpose assistant agent.",
-      "path": "prompts/system-prompts/general-assistant.md",
+      "path": "prompts/system-prompts/simple-clanker.md",
       "tags": [
         "system-prompt"
       ]

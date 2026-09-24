@@ -1,9 +1,9 @@
 ---
-name: code-review
+name: second-opinion
 description: Review a diff or pull request for correctness, readability, and maintainability issues. Use when asked to review code changes.
 ---
 
-# Code review
+# Second opinion
 
 ## Purpose
 

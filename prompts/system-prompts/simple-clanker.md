@@ -1,5 +1,5 @@
 ---
-name: general-assistant
+name: simple-clanker
 description: Baseline system prompt for a general-purpose assistant agent.
 variables:
   - name: ASSISTANT_NAME
@@ -14,7 +14,7 @@ variables:
     description: Today's date, injected at runtime.
 ---
 
-# General assistant
+# Simple clanker
 
 ## Prompt
 

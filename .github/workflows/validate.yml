@@ -18,4 +18,4 @@ jobs:
       - name: Smoke-test install script
         run: |
           scripts/install.sh --dest "$RUNNER_TEMP/skills" --all
-          test -f "$RUNNER_TEMP/skills/code-review/SKILL.md"
+          test -f "$RUNNER_TEMP/skills/second-opinion/SKILL.md"

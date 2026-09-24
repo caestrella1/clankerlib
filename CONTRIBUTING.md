@@ -17,7 +17,7 @@ Then:
 
 ## Rules
 
-- **Naming:** kebab-case (`code-review`, not `CodeReview` or `code_review`).
+- **Naming:** kebab-case (`second-opinion`, not `SecondOpinion` or `second_opinion`).
 - **Self-contained:** a skill folder must work when copied on its own. Put supporting files inside the skill folder and reference them with relative paths.
 - **Descriptions:** one sentence that says what the entry does *and* when to use it. Agents use this text to decide whether to load a skill.
 - **Agent-agnostic:** no vendor-specific syntax, tool names, or paths. If an entry has environment requirements, state them in the `compatibility` frontmatter field.
