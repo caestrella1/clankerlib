@@ -24,7 +24,7 @@ Standing rules to include in whatever file your agent reads for project context 
 | [coding-standards](instructions/coding-standards.md) | Readability, naming, and structure rules | Any coding task |
 | [commits-for-humans](instructions/commits-for-humans.md) | Commit message rules | Agent writes git commits |
 | [human-mode](instructions/human-mode.md) | Short, plain writing rules for responses, comments, and docs | Always; add it to every agent |
-| [safe-pr-clanker](instructions/safe-pr-clanker.md) | Unattended task-to-draft-PR workflow with human gates | Agent works on autopilot and opens PRs |
+| [safe-workflow](instructions/safe-workflow.md) | Unattended task-to-draft-PR workflow with human gates | Agent works on autopilot and opens PRs |
 
 ### Prompts
 

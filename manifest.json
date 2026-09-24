@@ -66,9 +66,9 @@
       ]
     },
     {
-      "name": "safe-pr-clanker",
+      "name": "safe-workflow",
       "description": "Rules for an agent working unattended from task to draft PR, keeping a human in control of review, merge, and unclear decisions.",
-      "path": "instructions/safe-pr-clanker.md",
+      "path": "instructions/safe-workflow.md",
       "tags": [
         "git",
         "autonomy",

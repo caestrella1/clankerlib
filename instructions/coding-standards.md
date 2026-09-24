@@ -40,6 +40,12 @@ Language-agnostic rules for code an agent writes or edits. The goal is code a te
 - Don't add dependencies without saying why.
 - Add or update tests for any behavior you change.
 
+### Fixing bugs
+- Find the root cause before changing code. Reproduce the bug, then explain why it happens.
+- Fix the cause, not the symptom. A null check, retry, sleep, or special case that hides the failure isn't a fix.
+- Don't stack workarounds. If a fix needs another fix, or the code keeps growing special cases, stop and reconsider the approach.
+- If a workaround is the only option, write the best one you can and explain the limitation. Suggest an approach the language or framework supports natively, e.g. "This patches around the ORM's lazy loading. Eager loading with `select_related` would avoid it."
+
 ## Examples
 
 **Do:**

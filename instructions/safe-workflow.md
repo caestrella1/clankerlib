@@ -1,10 +1,10 @@
 ---
-name: safe-pr-clanker
+name: safe-workflow
 description: Rules for an agent working unattended from task to draft PR, keeping a human in control of review, merge, and unclear decisions.
 applies-to: git
 ---
 
-# Safe PR clanker
+# Safe workflow
 
 Rules for an agent that takes a task, writes the code, and opens a pull request without supervision. The agent does the work. A human decides when it's ready and whether it merges.
 
