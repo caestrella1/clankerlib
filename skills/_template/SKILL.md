@@ -1,6 +1,11 @@
 ---
 name: _template
 description: One sentence describing what the skill does and when an agent should use it.
+# Optional fields (https://agentskills.io/specification):
+# license: MIT
+# compatibility: Requires Python 3.10+ and network access
+# metadata:
+#   author: your-name
 ---
 
 # Skill Title
@@ -34,6 +39,10 @@ TODO: Nearby situations this skill should *not* handle.
 
 **Output:** TODO
 
-## References
+## Bundled files
 
-TODO: Optional supporting files placed alongside this SKILL.md (scripts, templates, reference docs).
+TODO: Optional. Put supporting files next to this SKILL.md and reference them by relative path:
+
+- `scripts/`: executable helpers the agent can run
+- `references/`: extra docs loaded only when needed
+- `assets/`: templates, schemas, sample data

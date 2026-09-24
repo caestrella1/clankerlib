@@ -1,6 +1,7 @@
 ---
 name: docx-handling
 description: Create, read, and edit Word (.docx) documents. Use when a task involves a .docx file as input or output.
+compatibility: Requires Python 3 with python-docx; pandoc optional. Installing them needs network access.
 ---
 
 # DOCX Handling

@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
-# Copy skills from this library into a project's skills directory.
+# Copy skills from this library into an agent's skills directory.
 #
 # Usage:
-#   scripts/install.sh [--dest DIR] [--symlink] <skill>... | --all
+#   scripts/install.sh --dest DIR [--symlink] <skill>... | --all
 #   scripts/install.sh --list
 #
-# Defaults to ./.claude/skills in the current working directory.
+# DIR is wherever your agent discovers skills; see its documentation.
 set -euo pipefail
 
 LIB_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 SKILLS_DIR="$LIB_ROOT/skills"
-DEST=".claude/skills"
+DEST=""
 MODE="copy"
 SKILLS=()
 
@@ -38,7 +38,7 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
-if [[ ${#SKILLS[@]} -eq 0 ]]; then
+if [[ -z "$DEST" || ${#SKILLS[@]} -eq 0 ]]; then
   usage >&2
   exit 1
 fi

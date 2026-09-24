@@ -3,7 +3,8 @@
 
 Checks:
   - every skill/instruction/prompt has frontmatter with `name` and `description`
-  - `name` is kebab-case and matches its folder (skills) or file stem (others)
+  - `name` is kebab-case, <= 64 chars, and matches its folder (skills) or file stem
+  - `description` is <= 1024 chars (Agent Skills spec: https://agentskills.io/specification)
   - every manifest entry points to an existing path with matching name/description
   - every entry on disk is listed in the manifest (templates excluded)
 
@@ -67,8 +68,10 @@ def main():
                 if not fm.get(key):
                     errors.append(f"{rel(entry_file)}: frontmatter missing `{key}`")
             name = fm.get("name", "")
-            if name and not NAME_RE.match(name):
-                errors.append(f"{rel(entry_file)}: name `{name}` is not kebab-case")
+            if name and (not NAME_RE.match(name) or len(name) > 64):
+                errors.append(f"{rel(entry_file)}: name `{name}` must be kebab-case, max 64 chars")
+            if len(fm.get("description", "")) > 1024:
+                errors.append(f"{rel(entry_file)}: description exceeds 1024 chars")
             if name and name != expected_name:
                 errors.append(f"{rel(entry_file)}: name `{name}` does not match `{expected_name}`")
 

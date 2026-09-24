@@ -1,12 +1,12 @@
 # clankerlib
 
-A reusable library of **skills**, **instructions**, and **prompts** for AI agents. Every entry is a self-contained Markdown file, so you can copy it, symlink it, or pull it into any project.
+A reusable, agent-agnostic library of **skills**, **instructions**, and **prompts** for AI agents. Every entry is plain Markdown with no vendor-specific syntax, so it works with any agent or model and can be copied, symlinked, or pulled into any project.
 
 ## Contents
 
 ### Skills
 
-Each skill lives in its own folder under `skills/`. The `SKILL.md` inside uses the [Claude Code skill format](https://docs.claude.com/en/docs/claude-code/skills).
+Each skill lives in its own folder under `skills/` and follows the open [Agent Skills specification](https://agentskills.io/specification) (`SKILL.md` with `name`/`description` frontmatter), which [many agents support](https://agentskills.io/clients).
 
 | Name | Description | When to use |
 |---|---|---|
@@ -16,7 +16,7 @@ Each skill lives in its own folder under `skills/`. The `SKILL.md` inside uses t
 
 ### Instructions
 
-Standing rules to include in an agent's context (e.g. `CLAUDE.md`, `AGENTS.md`, `.cursorrules`).
+Standing rules to include in whatever file your agent reads for project context (e.g. `AGENTS.md`), or paste into a system prompt.
 
 | Name | Description | When to use |
 |---|---|---|
@@ -43,7 +43,7 @@ clankerlib/
 ├── manifest.json                 # machine-readable index
 └── scripts/
     ├── validate.py               # frontmatter + manifest consistency checks
-    └── install.sh                # copy/symlink skills into a project
+    └── install.sh                # copy/symlink skills into an agent's skills dir
 ```
 
 Files and folders that start with `_` (e.g. `skills/_template/`) are templates. They are skipped by validation and install.
@@ -54,24 +54,32 @@ Files and folders that start with `_` (e.g. `skills/_template/`) are templates. 
 |---|---|---|
 | Git submodule | `git submodule add https://github.com/caestrella1/clankerlib .agent-lib` | Version-locked, works well with CI |
 | Git subtree | `git subtree add --prefix .agent-lib https://github.com/caestrella1/clankerlib main --squash` | Content lives in your repo's history, no separate clone step |
-| degit | `npx degit caestrella1/clankerlib/skills/code-review .claude/skills/code-review` | One-time snapshot to customize |
-| Symlink | `ln -s ~/src/clankerlib/skills/code-review .claude/skills/code-review` | Local dev across several projects |
-| CI copy | `git clone --depth 1 https://github.com/caestrella1/clankerlib /tmp/lib && /tmp/lib/scripts/install.sh <skill>...` | Projects that need only a subset |
+| degit | `npx degit caestrella1/clankerlib/skills/code-review <skills-dir>/code-review` | One-time snapshot to customize |
+| Symlink | `ln -s ~/src/clankerlib/skills/code-review <skills-dir>/code-review` | Local dev across several projects |
+| CI copy | `git clone --depth 1 https://github.com/caestrella1/clankerlib /tmp/lib && /tmp/lib/scripts/install.sh --dest <skills-dir> <skill>...` | Projects that need only a subset |
 
 Pin a release by adding `#v0.1.0` (degit) or checking out the tag (submodule/subtree).
 
-### Claude Code
+`<skills-dir>` is wherever your agent discovers skills. Check your agent's documentation for the path.
 
-Claude Code loads project skills from `.claude/skills/<name>/SKILL.md`. Install into that path with:
+### Install script
 
 ```bash
-# from your project root
-path/to/clankerlib/scripts/install.sh --list                 # show available skills
-path/to/clankerlib/scripts/install.sh code-review            # copy one skill
-path/to/clankerlib/scripts/install.sh --all                  # copy all skills
-path/to/clankerlib/scripts/install.sh --symlink code-review  # symlink (stays in sync)
-path/to/clankerlib/scripts/install.sh --dest ~/.claude/skills --all   # user-level install
+path/to/clankerlib/scripts/install.sh --list                                # show available skills
+path/to/clankerlib/scripts/install.sh --dest <skills-dir> code-review       # copy one skill
+path/to/clankerlib/scripts/install.sh --dest <skills-dir> --all             # copy all skills
+path/to/clankerlib/scripts/install.sh --dest <skills-dir> --symlink --all   # symlink (stays in sync)
 ```
+
+### Apps without filesystem access
+
+Some agent apps (web or mobile chat clients) don't read skills from disk and instead take an upload, often a zip of the skill folder. That upload format is set by each product and isn't part of the Agent Skills spec. To build one:
+
+```bash
+cd skills && zip -r ../code-review.zip code-review
+```
+
+For instructions and prompts, paste the Markdown body into the app's custom instructions or system prompt field.
 
 ## Contributing
 
