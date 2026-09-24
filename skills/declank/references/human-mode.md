@@ -1,10 +1,10 @@
 ---
-name: concise-writing
+name: human-mode
 description: Rules for short, plain, direct writing in responses, code comments, and documentation.
 applies-to: all
 ---
 
-# Concise writing
+# Human mode
 
 Say what the reader needs in plain words, then stop.
 

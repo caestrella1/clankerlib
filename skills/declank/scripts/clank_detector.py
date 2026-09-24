@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """Flag wordy or unclear writing in text, Markdown, and code comments.
 
-Reports findings by rule ID from references/concise-writing.md. It only
+Reports findings by rule ID from references/human-mode.md. It only
 flags; a person or agent decides how to rewrite. Expect some false positives.
 
 Usage:
-  check_prose.py FILE...     check files (code files: comments only)
-  check_prose.py -           check text from stdin
+  clank_detector.py FILE...     check files (code files: comments only)
+  clank_detector.py -           check text from stdin
 Exit code: 0 if clean, 1 if anything was flagged.
 """
 import re

@@ -32,7 +32,7 @@ Language-agnostic rules for code an agent writes or edits. The goal is code a te
 - Error messages say what failed *and* what to do: `"config.yaml not found; run 'init' first"`.
 
 ### Comments
-- Follow the code comment rules (C1 to C7) in [concise-writing](concise-writing.md): explain why, not what.
+- Follow the code comment rules (C1 to C7) in [human-mode](human-mode.md): explain why, not what.
 - `TODO` comments include a reason or ticket: `# TODO(#123): remove after v2 migration`.
 
 ### Scope

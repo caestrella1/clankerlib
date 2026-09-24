@@ -23,7 +23,7 @@ errors = []
 # Skills must work when copied alone, so some bundle a copy of a shared file.
 # copy path -> source path
 SYNCED_COPIES = {
-    "skills/tighten-writing/references/concise-writing.md": "instructions/concise-writing.md",
+    "skills/declank/references/human-mode.md": "instructions/human-mode.md",
 }
 
 

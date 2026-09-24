@@ -1,12 +1,12 @@
 ---
-name: tighten-writing
+name: declank
 description: Rewrite text, code comments, or documentation to be shorter, plainer, and more direct. Use when asked to tighten, simplify, shorten, or de-fluff writing, or to clean up verbose comments or docs.
 compatibility: The optional checker script needs Python 3.8+ (standard library only).
 ---
 
-# Tighten writing
+# Declank
 
-Rewrite existing text so it says the same thing in fewer, plainer words. The rules are in [references/concise-writing.md](references/concise-writing.md).
+Rewrite existing text so it says the same thing in fewer, plainer words. The rules are in [references/human-mode.md](references/human-mode.md).
 
 ## When to use
 
@@ -20,8 +20,8 @@ Don't use it to change meaning, or a tone the author chose on purpose.
 
 1. Run the checker for a first pass. It flags patterns by rule ID and misses things, so read the text too.
    ```bash
-   python3 scripts/check_prose.py README.md src/app.py   # code files: comments only
-   echo "draft text" | python3 scripts/check_prose.py -
+   python3 scripts/clank_detector.py README.md src/app.py   # code files: comments only
+   echo "draft text" | python3 scripts/clank_detector.py -
    ```
 2. Read the text against the rules. In code, touch only comments and docstrings.
 3. Rewrite. Keep every fact, number, name, and instruction.
