@@ -29,6 +29,14 @@
       ]
     },
     {
+      "name": "huh",
+      "description": "Re-explain your last response in simpler, plainer words. Use when the user says \"huh?\", \"I don't follow\", \"simpler please\", or that an answer was too complicated.",
+      "path": "skills/huh",
+      "tags": [
+        "writing"
+      ]
+    },
+    {
       "name": "second-opinion",
       "description": "Review a diff or pull request for correctness, readability, and maintainability issues. Use when asked to review code changes.",
       "path": "skills/second-opinion",

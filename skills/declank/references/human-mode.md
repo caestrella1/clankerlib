@@ -34,6 +34,8 @@ The prose rules (P) are adapted from [unslop](https://github.com/cursor/plugins/
 
 **R9. State uncertainty once, where it applies.** "I haven't tested this on Windows." Don't hedge every sentence.
 
+**R10. Define jargon on first use.** A few plain words is enough: "idempotent (safe to run twice)". Skip it if the reader clearly knows the term.
+
 ## Code comments (C)
 
 **C1. Explain why, not what.** The code shows what it does. A comment gives a reason, a constraint, or a consequence that isn't obvious.
@@ -101,6 +103,10 @@ The prose rules (P) are adapted from [unslop](https://github.com/cursor/plugins/
 **P17. Don't over-compress.** Concise isn't cryptic. Keep articles and verbs, and spell out arrows and abbreviations in prose.
 - Before: "Bad date → exit 2, no write."
 - After: "A bad date exits with code 2 and writes nothing."
+
+**P18. Give a concrete example.** Show the idea with a real case instead of describing it in the abstract.
+- Before: "The function handles edge cases in input normalization."
+- After: "The function turns `" Foo "` and `"FOO"` into `"foo"`."
 
 ## Style (S)
 

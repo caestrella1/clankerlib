@@ -13,6 +13,7 @@ Each skill lives in its own folder under `skills/` and follows the open [Agent S
 | [data-analysis](skills/data-analysis/SKILL.md) | Explore, clean, and summarize tabular data | Analyzing a CSV, spreadsheet, or dataset |
 | [declank](skills/declank/SKILL.md) | Rewrite text, comments, or docs to be shorter and plainer. Includes a checker script | Asked to shorten, simplify, or de-fluff writing |
 | [docx-handling](skills/docx-handling/SKILL.md) | Create, read, and edit Word documents | A `.docx` file is input or output |
+| [huh](skills/huh/SKILL.md) | Re-explain the last response in simpler words | The answer was too convoluted ("huh?") |
 | [second-opinion](skills/second-opinion/SKILL.md) | Review diffs/PRs for correctness, readability, maintainability | Asked to review code changes |
 
 ### Instructions
