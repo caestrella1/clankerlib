@@ -14,9 +14,10 @@ Rules for an agent that takes a task, writes the code, and opens a pull request 
 2. Create a branch (see [Branching](#branching)).
 3. Do the work, with tests for any behavior you add or change.
 4. Run the checks locally (see [Before each push](#before-each-push)), then push.
-5. Open the PR as a **draft**.
+5. Open the PR as a **draft** (see [PR description](#pr-description)).
 6. Watch CI and fix failures (see [Fixing CI](#fixing-ci)).
-7. Report status when it changes (see [Status reports](#status-reports)).
+7. Address review comments (see [Review comments](#review-comments)).
+8. Report status when it changes (see [Status reports](#status-reports)).
 
 ## Human gates
 
@@ -58,6 +59,18 @@ Run the repo's lint, typecheck, and tests for the code you changed. Push only wh
 - Stop and report if:
   - the same check fails the same way after two fix attempts, or
   - the check also fails on the base branch, so the failure isn't from this PR.
+
+## PR description
+
+- Use the repo's PR template if it has one.
+- Otherwise cover what changed, why, how you tested it, and open questions.
+- Keep it short and plain, following [human-mode](human-mode.md).
+
+## Review comments
+
+- Fix each comment, or reply explaining why you didn't.
+- Treat a large or unclear request (a redesign, an API change) as a reason to stop and ask.
+- Leave resolving threads to the reviewer.
 
 ## Hands off
 
