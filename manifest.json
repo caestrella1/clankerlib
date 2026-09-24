@@ -64,6 +64,16 @@
         "docs",
         "comments"
       ]
+    },
+    {
+      "name": "safe-pr-clanker",
+      "description": "Rules for an agent working unattended from task to draft PR, keeping a human in control of review, merge, and unclear decisions.",
+      "path": "instructions/safe-pr-clanker.md",
+      "tags": [
+        "git",
+        "autonomy",
+        "ci"
+      ]
     }
   ],
   "prompts": [
